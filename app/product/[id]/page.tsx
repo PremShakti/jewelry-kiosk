@@ -3,65 +3,8 @@
 import { useRouter, useParams } from "next/navigation"
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
+import { products } from "@/lib/db"
 
-const products = [
-  {
-    id: 1,
-    name: "Elegant Gold Earrings",
-    price: "₹12,999",
-    image: "/elegant-gold-earrings-jewelry-close-up.jpg",
-    description:
-      "A handcrafted 22K gold earring inspired by celebrity fashion. These stunning earrings feature intricate detailing and a timeless design that complements any outfit. Perfect for special occasions or adding a touch of elegance to your everyday look.",
-    details: [
-      "Material: 22K Gold",
-      "Weight: 8.5 grams",
-      "Design: Traditional with modern twist",
-      "Occasion: Weddings, Parties, Festivals",
-    ],
-  },
-  {
-    id: 2,
-    name: "Diamond Necklace",
-    price: "₹45,000",
-    image: "/diamond-necklace-luxury-jewelry-close-up.jpg",
-    description:
-      "An exquisite diamond necklace that radiates sophistication and luxury. Featuring premium quality diamonds set in 18K gold, this piece is designed to make a statement at any grand occasion.",
-    details: [
-      "Material: 18K Gold with Diamonds",
-      "Diamond Quality: VVS",
-      "Total Carats: 2.5",
-      "Occasion: Weddings, Galas, Special Events",
-    ],
-  },
-  {
-    id: 3,
-    name: "Royal Bracelet",
-    price: "₹22,500",
-    image: "/royal-gold-bracelet-jewelry-close-up.jpg",
-    description:
-      "A regal gold bracelet that embodies royal elegance. Crafted with precision and adorned with intricate patterns, this bracelet is perfect for those who appreciate fine jewelry.",
-    details: [
-      "Material: 22K Gold",
-      "Weight: 15 grams",
-      "Design: Royal traditional pattern",
-      "Occasion: Weddings, Festivals, Celebrations",
-    ],
-  },
-  {
-    id: 4,
-    name: "Pearl Drop Earrings",
-    price: "₹18,999",
-    image: "/pearl-drop-earrings-luxury-close-up.jpg",
-    description:
-      "Classic pearl drop earrings that exude timeless elegance. Featuring lustrous pearls suspended from delicate gold settings, these earrings are perfect for adding sophistication to any ensemble.",
-    details: [
-      "Material: 18K Gold with Natural Pearls",
-      "Pearl Size: 8mm",
-      "Design: Classic drop style",
-      "Occasion: Formal events, Parties, Daily wear",
-    ],
-  },
-]
 
 export default function ProductDetailPage() {
   const router = useRouter()
